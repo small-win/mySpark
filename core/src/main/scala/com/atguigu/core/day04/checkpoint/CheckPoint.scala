@@ -9,8 +9,8 @@ import org.apache.spark.{SparkConf, SparkContext}
   */
 object CheckPoint {
     def main(args: Array[String]): Unit = {
-//        System.setProperty("HADOOP_USER_NAME", "atguigu")
-        val conf: SparkConf = new SparkConf().setAppName("Practice").setMaster("local[2]")
+        System.setProperty("HADOOP_USER_NAME", "atguigu")
+        val conf: SparkConf = new SparkConf().setAppName("Practice").setMaster("local[4]")
         val sc = new SparkContext(conf)
         sc.setCheckpointDir("hdfs://hadoop102:9000/ck")
         val rdd1= sc.parallelize(Array("hello" /*, "hello", "world", "hello", "atguigu", "hello", "atguigu", "atguigu"*/))

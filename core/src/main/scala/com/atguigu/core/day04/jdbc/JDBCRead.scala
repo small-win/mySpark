@@ -16,7 +16,7 @@ object JDBCRead {
     
         val url = "jdbc:mysql://hadoop102:3306/rdd"
         val userName = "root"
-        val passWd = "aaaaaa"
+        val passWd = "000000"
     
         val rdd = new JdbcRDD[(Int, String)](
             sc,

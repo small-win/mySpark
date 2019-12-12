@@ -12,7 +12,7 @@ object CacheDemo {
     def main(args: Array[String]): Unit = {
         val conf: SparkConf = new SparkConf().setAppName("Practice").setMaster("local[2]")
         val sc = new SparkContext(conf)
-        val rdd1: RDD[String] = sc.parallelize(Array("hello", "hello", "world"/*, "hello", "atguigu", "hello", "atguigu", "atguigu"*/))
+        val rdd1: RDD[String] = sc.parallelize(Array("hello"/*, "hello", "world", "hello", "atguigu", "hello", "atguigu", "atguigu"*/))
         val rdd2: RDD[(String, Long)] = rdd1.map(x => {
             println("rdd2: " + x)
             (x, System.currentTimeMillis)

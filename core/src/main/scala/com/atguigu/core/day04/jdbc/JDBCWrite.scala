@@ -14,7 +14,7 @@ object JDBCWrite {
         
         val url = "jdbc:mysql://hadoop102:3306/rdd"
         val userName = "root"
-        val passWd = "aaaaaa"
+        val passWd = "000000"
         
         val conf: SparkConf = new SparkConf().setAppName("JDBCWrite").setMaster("local[2]")
         val sc: SparkContext = new SparkContext(conf)
