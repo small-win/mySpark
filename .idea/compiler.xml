@@ -7,7 +7,11 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="core" />
+        <module name="spark-core-project" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="spark-core" target="1.8" />
+    </bytecodeTargetLevel>
   </component>
 </project>
