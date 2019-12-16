@@ -8,6 +8,8 @@
         <outputRelativeToContentRoot value="true" />
         <module name="core" />
         <module name="spark-core-project" />
+        <module name="spark-sql" />
+        <module name="spark-sql-project" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>

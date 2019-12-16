@@ -13,7 +13,7 @@ object ProjectApp {
         val conf: SparkConf = new SparkConf().setAppName("ProjectApp").setMaster("local[2]")
         val sc: SparkContext = new SparkContext(conf)
         val userVisitActionRDD: RDD[UserVisitAction] = readFromFile(sc, "c:/user_visit_action.txt")
-        
+
         // 需求1:  调用对象封装的方法，并传两个形参做分析
         val cidsTop10 = CategoryTop10.statCategoryTop10(sc, userVisitActionRDD)
         
@@ -26,9 +26,11 @@ object ProjectApp {
         CategoryTop10Session.calcTop10Session_2(sc, cidsTop10, userVisitActionRDD)
         println("4-------")
         CategoryTop10Session.calcTop10Session_3(sc, cidsTop10, userVisitActionRDD)
+
+        //需求3:
+        PageConversionApp.statPageConversionRate(sc, userVisitActionRDD, "1,2,3,4,5,6,7")
+
         sc.stop()
-        
-        
     }
     
     
